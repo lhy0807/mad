@@ -1,0 +1,78 @@
+/*
+Theme Name: Mad
+Theme URI: http://www.caseba.com/
+Description: This is a simple material designed theme made by materializecss, provided by a high school student Chris Li.
+Author: Chris Li
+Author URL: http://www.caseba.com/
+Version: 0.1
+Tags: Responsive-layout,one-column
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+@import url("css/materialize.min.css");
+@import url("css/style.css");
+.aligncenter{clear: both;display: block;margin:auto;}
+.alignleft {display: inline;float: left;}
+.alignright {display: inline;float: right;} 
+.wp-caption {
+	background-color: #f3f3f3;
+	border: 1px solid #ddd;
+	-khtml-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px; /* optional rounded corners for browsers that support it */
+	margin: 10px;
+	padding-top: 4px;
+	text-align: center;
+	}
+	.wp-caption img {
+	border: none;
+	margin-left: -25px;
+	padding: 0;
+	}
+	.wp-caption p.wp-caption-text {
+	font-size: 12px;
+	line-height: 17px;
+	margin-left: -25px;
+	padding: 0 4px 5px;
+	}
+.sticky{}
+.screen-reader-text{}
+.gallery-caption{}
+.bypostauthor{}
+/*多说CSS*/
+#ds-reset .ds-avatar img{  
+width:54px;height:54px; /*设置图像的长和宽*/  
+border-radius: 27px;/*设置图像圆角效果,在这里我直接设置了超过width/2的像素，即为圆形了*/  
+-webkit-border-radius: 27px;/*圆角效果：兼容webkit浏览器*/
+-moz-border-radius:27px;
+box-shadow: inset 0 -1px 0 #3333sf;/*设置图像阴影效果*/  
+-webkit-box-shadow: inset 0 -1px 0 #3333sf;
+}
+#ds-reset .ds-avatar img{
+    width:54px;height:54px; /*设置图像的长和宽*/
+    border-radius: 27px;/*设置图像圆角效果,在这里我直接设置了超过width/2的像素，即为圆形了*/
+    -webkit-border-radius: 27px;/*圆角效果：兼容webkit浏览器*/
+    -moz-border-radius:27px;
+    box-shadow: inset 0 -1px 0 #3333sf;/*设置图像阴影效果*/
+    -webkit-box-shadow: inset 0 -1px 0 #3333sf;
+    -webkit-transition: 0.4s;   
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    transition: transform 0.4s ease-out;/*变化时间设置为0.4秒(变化动作即为下面的图像旋转360读）*/
+        -moz-transition: -moz-transform 0.4s ease-out;
+        }
+
+#ds-reset .ds-avatar img:hover{/*设置鼠标悬浮在头像时的CSS样式*/
+    box-shadow: 0 0 10px #fff; rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);
+    -webkit-box-shadow: 0 0 10px #fff; rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);
+    transform: rotateZ(360deg);/*图像旋转360度*/
+    -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+       }
+#ds-thread #ds-reset .ds-textarea-wrapper {border-color: #FFFFFF;}
+#ds-thread #ds-reset .ds-post-options {border-color: #FFFFFF;}
+#ds-thread #ds-reset .ds-post-button {border-color: #FFFFFF;}
+#ds-thread #ds-reset a.ds-thread-liked {background: rgb(255, 255, 255) none repeat scroll 0% 0%;}
+#ds-thread #ds-reset a.ds-like-thread-button {color: rgb(255, 255, 255);border-color: #FFFFFF; background-color: #FFFFFF;}
+#ds-thread #ds-reset li.ds-tab a.ds-current {border-color: #FFFFFF;background-color: #FFFFFF;}
+#ds-reset .ds-gradient-bg{background:none !important;}
