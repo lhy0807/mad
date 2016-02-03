@@ -8,7 +8,6 @@
   $imgcopyright=$matches[1];
  }
 ?>
-		<div id="wrapper">
 		<div class="row" style="text-align: center;" id="searchform">
 			<div class="col m6 s12 offset-m3 input-field">
 				<form method="get" action="/">
@@ -19,9 +18,10 @@
 		</div>
 		<div class="row" style="text-align: center;">
 			<div class="col m6 s12 offset-m3">
-			<img class="z-depth-3 materialboxed" id="bing" data-caption = "<?php echo $imgcopyright?>" src="<?php echo get_stylesheet_directory_uri().'/bing.php';?>" width=100%/>
+			<img class="z-depth-3 materialboxed" id="bing" data-caption = "<?php echo $imgcopyright?>" width=100%/>
 			</div>
 		</div>
+		<div id="content">
 	<?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
 <div class="row" id="single-post">
 			<div class="col m6 s12 offset-m3">

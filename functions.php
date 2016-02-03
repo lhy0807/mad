@@ -75,3 +75,28 @@ function showAdminMessages()
 		echo '</div>';
 	}
 }
+//头像重置到i.leiue.com
+add_filter( 'get_avatar' , 'my_custom_avatar' , 1 , 5 );
+function my_custom_avatar( $avatar, $id_or_email, $size, $default, $alt) {
+	if (filter_var($id_or_email, FILTER_VALIDATE_EMAIL)) {//判断是否为邮箱
+		$email = $id_or_email;//用户邮箱
+		$user = get_user_by( 'email', $email );//通过邮箱查询用户信息
+	}else{
+		$uid = (int) $id_or_email;//获取用户ID
+		$user = get_user_by( 'id', $uid );//通过ID查询用户信息
+	}
+ 
+	//$user_login = $user->user_login;//用户名
+	$email = $user->user_email;//用户邮箱
+	$alt = $user->user_nicename;//用户昵称
+	if(get_comment_author_email( $comment )){//通过评论获取邮箱
+		$email = get_comment_author_email( $comment );
+		$alt = get_comment_author( $comment );
+	}
+ 
+    $avatar = "http://i.leiue.com/avatar.php?email=".$email;
+    $avatar = "<img alt='{$alt}' src='{$avatar}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}' />";
+ 
+    return $avatar;
+}
+?>

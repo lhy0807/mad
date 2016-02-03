@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<script>$("#wrapper").hide();</script>
+	<script>$("#wrapper").hide();$("#box-image").hide();$("#bing").hide();</script>
 <head>
 	<!--设置UTF-8编码-->
 	<meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo('charset'); ?>"/>
@@ -14,7 +14,14 @@
 	<link href="<?php echo bloginfo('stylesheet_url');?>" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<?php wp_head(); do_action('wp_head');?>
 	<script>
-		window.onload = function(){$("#preloader").fadeOut();$("#all").fadeIn();}
+		window.onload = function(){
+			$("#preloader").fadeOut();
+			$("#wrapper").fadeIn();
+			document.getElementById("box-image").src = "<?php echo get_stylesheet_directory_uri().'/bing.php'?>"
+			$("#box-image").fadeIn();;
+			document.getElementById("bing").src = "<?php echo get_stylesheet_directory_uri().'/bing.php'?>"
+			$("#bing").fadeIn();;
+			}
 	</script>
 </head>
 <body>
@@ -59,7 +66,7 @@
         </div>
       </div>
     </div>
-    <div id="all" style="display: none;">
+    <div id="wrapper" style="display: none;">
   <nav role="navigation" id="nav">
     <div class="nav-wrapper container">
       <a id="logo-container" href="<?php bloginfo('url');?>" class="brand-logo white-text"><?php bloginfo('name'); ?></a>
@@ -75,6 +82,6 @@
     </div>
   </nav>
 <div id="box">
-    <img style="width: 100%;height: auto;" src="<?php echo get_stylesheet_directory_uri().'/bing.php'?>"/>
+    <img id="box-image" style="width: 100%;height: auto;"/>
     <h5 class="white-text" id="box-span"><?php bloginfo('description');?></h5>
 </div>
