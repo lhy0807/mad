@@ -53,7 +53,7 @@
   <?php endif; ?>
   	</div>
 	<div style="text-align: center; margin-bottom: 20px;" class="row">
-	<?php posts_nav_link(" ",'<div id="previous-page" class="btn-floating btn-large waves-effect waves-light red hoverable" style="margin-right: 10px;"><i class="material-icons">chevron_left</i></div>','<div id="next-page" class="btn-floating btn-large waves-effect waves-light red hoverable" style="margin-left: 10px;"><i class="material-icons">chevron_right</i></div>')?>
+	<?php posts_nav_link(" ",'<div id="previous-page" class="btn-floating btn-large waves-effect waves-light red hoverable tooltipped" data-position="bottom" data-delay="50" data-tooltip="翻到上一页" style="margin-right: 10px;"><i class="material-icons">chevron_left</i></div>','<div id="next-page" class="btn-floating btn-large waves-effect waves-light red hoverable tooltipped" data-position="bottom" data-delay="50" data-tooltip="翻到下一页" style="margin-left: 10px;"><i class="material-icons">chevron_right</i></div>')?>
   </div>
 <div style="position: fixed;bottom: 10px;right: 10px;z-index:99;">
 	<a href="#" class="btn-floating btn-large waves-effect waves-light red" onclick="goTop();return false;"><i class="material-icons">navigation</i></a>
