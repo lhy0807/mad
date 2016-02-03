@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<script>$("#wrapper").hide();$("#box-image").hide();$("#bing").hide();</script>
+	<script>$("#wrapper").hide();document.getElementById("box").style="display:none;";document.getElementById("bing-box").style="display:none;";</script>
 <head>
 	<!--设置UTF-8编码-->
 	<meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo('charset'); ?>"/>
@@ -17,10 +17,12 @@
 		window.onload = function(){
 			$("#preloader").fadeOut();
 			$("#wrapper").fadeIn();
-			document.getElementById("box-image").src = "<?php echo get_stylesheet_directory_uri().'/bing.php'?>"
-			$("#box-image").fadeIn();;
-			document.getElementById("bing").src = "<?php echo get_stylesheet_directory_uri().'/bing.php'?>"
-			$("#bing").fadeIn();;
+			document.getElementById("box-image").src = "<?php echo get_stylesheet_directory_uri().'/bing.php'?>";
+			document.getElementById("box").style="";
+			$("#box").fadeIn();
+			document.getElementById("bing").src = "<?php echo get_stylesheet_directory_uri().'/bing.php'?>";
+			document.getElementById("bing-box").style="text-align: center;";
+			$("#bing-box").fadeIn();
 			}
 	</script>
 </head>
@@ -66,7 +68,7 @@
         </div>
       </div>
     </div>
-    <div id="wrapper" style="display: none;">
+    <div id="wrapper">
   <nav role="navigation" id="nav">
     <div class="nav-wrapper container">
       <a id="logo-container" href="<?php bloginfo('url');?>" class="brand-logo white-text"><?php bloginfo('name'); ?></a>

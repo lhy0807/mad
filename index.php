@@ -16,7 +16,7 @@
 				</form>
 			</div>
 		</div>
-		<div class="row" style="text-align: center;">
+		<div class="row" style="text-align: center;" id="bing-box">
 			<div class="col m6 s12 offset-m3">
 			<img class="z-depth-3 materialboxed" id="bing" data-caption = "<?php echo $imgcopyright?>" width=100%/>
 			</div>
