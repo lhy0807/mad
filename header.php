@@ -20,9 +20,11 @@
 			document.getElementById("box-image").src = "<?php echo get_stylesheet_directory_uri().'/bing.php'?>";
 			document.getElementById("box").style="";
 			$("#box").fadeIn();
+			if (document.getElementById("bing-box")) {
 			document.getElementById("bing").src = "<?php echo get_stylesheet_directory_uri().'/bing.php'?>";
 			document.getElementById("bing-box").style="text-align: center;";
 			$("#bing-box").fadeIn();
+			}
 			}
 	</script>
 </head>
