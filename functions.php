@@ -99,4 +99,34 @@ function my_custom_avatar( $avatar, $id_or_email, $size, $default, $alt) {
  
     return $avatar;
 }
+//获取颜色
+			function imgColor() {
+				$imgUrl = get_stylesheet_directory_uri().'/bing.php';
+			    $imageInfo = getimagesize($imgUrl);
+			    //图片类型
+			    $imgType = strtolower(substr(image_type_to_extension($imageInfo[2]), 1));
+			    //对应函数
+			    $imageFun = 'imagecreatefrom' . ($imgType == 'jpg' ? 'jpeg' : $imgType);
+			    $i = $imageFun($imgUrl);
+			    //循环色值
+			    $rColorNum=$gColorNum=$bColorNum=$total=0;
+			    for ($x=0;$x<imagesx($i);$x+=10) {
+			        for ($y=0;$y<imagesy($i)/20;$y+=10) {
+			            $rgb = imagecolorat($i,$x,$y);
+			            //三通道
+			            $r = ($rgb >> 16) & 0xFF;
+			            $g = ($rgb >> 8) & 0xFF;
+			            $b = $rgb & 0xFF;
+			            $rColorNum += $r;
+			            $gColorNum += $g;
+			            $bColorNum += $b;
+			            $total++;
+			        }
+			    }
+			    $rgb = array();
+			    $rgb['r'] = round($rColorNum/$total);
+			    $rgb['g'] = round($gColorNum/$total);
+			    $rgb['b'] = round($bColorNum/$total);
+			    return $rgb;
+				}
 ?>
