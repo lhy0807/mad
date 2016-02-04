@@ -1,12 +1,4 @@
 <!DOCTYPE html>
-<?php
-if(!isset($_COOKIE['r'])||!isset($_COOKIE['g'])||!isset($_COOKIE['b'])) {
-	setcookie("r", imgColor()['r'], time()+3600);
-	setcookie("g", imgColor()['g'], time()+3600);
-	setcookie("b", imgColor()['b'], time()+3600);
-	?><script>window.location.href="";</script><?php
-}
-?>
 <html>
 	<script>$("#wrapper").hide();document.getElementById("box").style="display:none;";document.getElementById("bing-box").style="display:none;";</script>
 <head>
@@ -79,7 +71,7 @@ if(!isset($_COOKIE['r'])||!isset($_COOKIE['g'])||!isset($_COOKIE['b'])) {
       </div>
     </div>
 <div id="wrapper">
-	<nav role="navigation" id="nav" style="background-color: rgb(<?php echo $_COOKIE['r'].','.$_COOKIE['g'].','.$_COOKIE['b'];?>);">
+	<nav role="navigation" id="nav">
 		<div class="nav-wrapper container">
 		<a id="logo-container" href="<?php bloginfo('url');?>" class="brand-logo white-text"><?php bloginfo('name'); ?></a>
 	      <?php

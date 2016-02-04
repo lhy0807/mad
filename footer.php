@@ -1,4 +1,4 @@
-	<footer class="page-footer" id="footer" style="background-color: rgb(<?php echo $_COOKIE['r'].','.$_COOKIE['g'].','.$_COOKIE['b'];?>);">
+	<footer class="page-footer" id="footer">
 	<?php wp_footer();?>
     <div class="container">
       	<div class="row">
