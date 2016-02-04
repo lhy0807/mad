@@ -70,22 +70,22 @@
         </div>
       </div>
     </div>
-    <div id="wrapper">
-  <nav role="navigation" id="nav">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="<?php bloginfo('url');?>" class="brand-logo white-text"><?php bloginfo('name'); ?></a>
-      <?php
-    wp_nav_menu(array(
-	'menu' => 'header-menu',
-	'menu_class' => 'right hide-on-med-and-down',
-	'theme_location' => 'header-menu',
-	'link_before' => '<div style="color:#ffffff">',
-	'link_after' => '</div>'
-	));
-      ?>
-    </div>
-  </nav>
-<div id="box">
-    <img id="box-image" style="width: 100%;height: auto;"/>
-    <h5 class="white-text" id="box-span"><?php bloginfo('description');?></h5>
-</div>
+<div id="wrapper">
+	<nav role="navigation" id="nav">
+		<div class="nav-wrapper container">
+		<a id="logo-container" href="<?php bloginfo('url');?>" class="brand-logo white-text"><?php bloginfo('name'); ?></a>
+	      <?php
+	    wp_nav_menu(array(
+		'menu' => 'header-menu',
+		'menu_class' => 'right hide-on-med-and-down',
+		'theme_location' => 'header-menu',
+		'link_before' => '<div style="color:#ffffff">',
+		'link_after' => '</div>'
+		));
+	      ?>
+		</div>
+	</nav>
+	<div id="box">
+    	<img id="box-image" style="width: 100%;height: auto;"/>
+    	<h5 class="white-text" id="box-span"><?php bloginfo('description');?></h5>
+	</div>
