@@ -7,6 +7,7 @@ Template Name: 归档页面
 	<div class="row">
 	  <h1 class="red-text" style="text-align: center;font-size: 3.5rem;">归档页面</h1>
 	  <div class="divider"></div>
+	  <p class="grey-text" style="text-align: center;"><?php bloginfo('name');?>, &nbsp;Since 2014</p>
 	</div>
 	<div class="row">
     <div class="col m6 offset-m3 s12" id="archives"> 
@@ -28,9 +29,9 @@ Template Name: 归档页面
                 if ($mon != $mon_tmp) { // 输出月份      
                     $mon = $mon_tmp;      
                     array_push($all[$year], $mon);      
-                    $output .= "<li><div class='collapsible-header'>$year 年 $mon 月</div><div class='collapsible-body' data-date='$year-$mon'><ul class='collection'>";      
+                    $output .= "<li><div class='collapsible-header active'>$year 年 $mon 月</div><div class='collapsible-body' data-date='$year-$mon'><ul class='collection'>";      
                 }      
-                $output .= '<li class="collection-item"><a href="'.get_permalink() .'"><span class="time">'.get_the_time('n-d').'</span>'.get_the_title() .'<em>('. get_comments_number('0', '1', '%') .')</em></a></li>';      
+                $output .= '<li class="collection-item"><a href="'.get_permalink() .'"><span class="badge">'.get_the_time('n-d').'</span>'.get_the_title() .'<em>('. get_comments_number('0', '1', '%') .')</em></a></li>';      
             endwhile;      
             wp_reset_postdata();      
             $output .= '</ul></div></li>';      
