@@ -22,7 +22,9 @@
     </div>
     <div class="footer-copyright">
       	<div class="container">
-       	Theme By <a href="http://www.caseba.com">Chris Lee</a> 
+       	Theme By <a href="http://www.caseba.com">Chris Lee</a>
+       	&nbsp;&nbsp;
+       	© 2014-<?php echo date("Y")?>
       	</div>
     </div>
   	</footer>
