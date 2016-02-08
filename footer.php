@@ -8,6 +8,7 @@
         	</div>
         	<div class="col l3 s6 offset-l3">
           		<h5 class="white-text">Links</h5>
+          		<div class="divider"></div>
 			    <?php
 			    wp_nav_menu(array(
 				'menu' => 'footer-menu',

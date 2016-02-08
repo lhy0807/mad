@@ -11,7 +11,7 @@
 	    </div>
 	  </div>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<h1 class="red-text" style="text-align: center;font-size: 3.5rem;"><?php the_title();?></h1>
+		<h1 class="red-text" style="text-align: center;font-size: 3.3rem;"><?php the_title();?></h1>
 	<p style="text-align: center;" class="grey-text">
 		<i class="material-icons tiny valign">alarm</i><?php the_time('Y-m-d')?>
 		<i class="material-icons tiny valign" style="margin-left: 10px;">face</i><?php the_author();?>
