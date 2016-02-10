@@ -15,7 +15,7 @@
 	<!-- CSS  -->
 	<link href="http://fonts.useso.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="<?php echo bloginfo('stylesheet_url');?>" type="text/css" rel="stylesheet" media="screen,projection"/>
-	<?php wp_head(); do_action('wp_head');?>
+	<?php wp_head();?>
 	<?php
 	$str=file_get_contents('http://cn.bing.com/HPImageArchive.aspx?idx=0&n=1');
 	if(preg_match("/<url>(.+?)<\/url>/ies",$str,$matches)){
@@ -83,21 +83,23 @@
       </div>
     </div>
 <div id="wrapper">
-	<nav role="navigation" id="nav">
-		<div class="nav-wrapper container">
-		<a id="logo-container" href="<?php bloginfo('url');?>" class="brand-logo white-text"><?php bloginfo('name'); ?></a>
+	<div id="box">
+	    	<img id="box-image" style="width: 100%;height: auto;"/>
+	    	<div id="box-span" onclick="javascript:window.location.href='<?php echo home_url();?>'">
+	    		<h2 class="white-text"><?php bloginfo('name'); ?></h2>
+	    		<hr />
+	    		<h5 class="white-text"><?php bloginfo('description');?></h5>
+	    	</div>
+	</div>
+	<nav class="center-align" role="navigation" id="nav" style="background-color: transparent;box-shadow: none;">
+		<div class="nav-wrapper container center-align">
 	      <?php
 	    wp_nav_menu(array(
 		'menu' => 'header-menu',
-		'menu_class' => 'right hide-on-med-and-down',
+		'menu_class' => 'hide-on-med-and-down',
 		'theme_location' => 'header-menu',
-		'link_before' => '<div style="color:#ffffff">',
-		'link_after' => '</div>'
 		));
 	      ?>
 		</div>
 	</nav>
-	<div id="box">
-    	<img id="box-image" style="width: 100%;height: auto;"/>
-    	<h5 class="white-text" id="box-span"><?php bloginfo('description');?></h5>
-	</div>
+<div class="divider" style="margin-bottom: 10px;"></div>

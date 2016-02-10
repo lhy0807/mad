@@ -1,33 +1,22 @@
-	<footer class="page-footer" id="footer">
+	<div class="divider"></div>
+	<footer class="page-footer" id="footer" style="padding-top: 0;background-color: transparent;">
 	<?php wp_footer();?>
-    <div class="container">
-      	<div class="row">
-        	<div class="col l6 s6">
-          		<h5 class="white-text"><?php bloginfo('name'); ?></h5>
-          		<p class="grey-text text-lighten-4"><?php echo bloginfo('description'); ?></p>
-        	</div>
-        	<div class="col l3 s6 offset-l3">
-          		<h5 class="white-text">Links</h5>
-          		<div class="divider"></div>
-			    <?php
+	<nav class="center-align" role="navigation" id="nav" style="background-color: transparent;box-shadow: none;">
+		<div class="nav-wrapper container">
+	      <?php
 			    wp_nav_menu(array(
 				'menu' => 'footer-menu',
-				'menu_class' => 'white-text',
+				'menu_class' => 'left',
 				'theme_location' => 'footer-menu',
-				'link_before' => '<div style="color:#ffffff">',
-				'link_after' => '</div>'
 				));
 			      ?>
-			</div>
-      	</div>
-    </div>
-    <div class="footer-copyright">
-      	<div class="container">
-       	Theme By <a href="http://www.caseba.com">Chris Lee</a>
+		<div class="right" style="color: #000000;">
+       	Theme By <a href="http://www.caseba.com" style="color: #F44336;">Chris Lee</a>
        	&nbsp;&nbsp;
-       	© 2014-<?php echo date("Y")?>
+       	© 2014-<?php echo date("Y")?> 			
       	</div>
-    </div>
+		</div>
+	</nav>
   	</footer>
 </div>
   <!--  Scripts-->
@@ -39,7 +28,6 @@
   var options = [
     {selector: '#nav', offset: 100, callback: 'Materialize.toast("欢迎来到Case吧!", 1500 )' },
     {selector: '#bing', offset: 1000, callback: 'Materialize.toast("最上方的这张图片来自必应每日一图", 1500 )' },
-    {selector: '#wrapper', offset: 1100, callback: 'Materialize.toast("这是我自己编写的博客主题", 1500 )' },
     {selector: '#footer', offset: 0, callback: 'Materialize.toast("Enjoy it!", 2000 )' }
        ];
   Materialize.scrollFire(options);

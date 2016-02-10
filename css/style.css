@@ -51,7 +51,6 @@ footer.page-footer {
     position:relative;
     max-height: 400px;
     overflow: hidden;
-    margin-bottom: 10px;
 }
 #box-span{
     display:inline-block;
