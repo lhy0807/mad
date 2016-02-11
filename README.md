@@ -1,2 +1,2 @@
 # mad
-A material designed Bootstrap theme
+A material designed Wordpress theme
