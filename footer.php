@@ -27,7 +27,6 @@
   	<script>
   var options = [
     {selector: '#nav', offset: 100, callback: 'Materialize.toast("欢迎来到Case吧!", 1500 )' },
-    {selector: '#bing', offset: 1000, callback: 'Materialize.toast("最上方的这张图片来自必应每日一图", 1500 )' },
     {selector: '#footer', offset: 0, callback: 'Materialize.toast("Enjoy it!", 2000 )' }
        ];
   Materialize.scrollFire(options);
