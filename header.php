@@ -91,15 +91,14 @@
 	    		<h5 class="white-text"><?php bloginfo('description');?></h5>
 	    	</div>
 	</div>
-	<nav class="center-align hide-on-small-only" role="navigation" id="nav" style="background-color: transparent;box-shadow: none;">
+	<nav class="center-align" role="navigation" id="nav" style="background-color: transparent;box-shadow: none;">
 		<div class="nav-wrapper container center-align">
 	      <?php
 	    wp_nav_menu(array(
 		'menu' => 'header-menu',
-		'menu_class' => 'hide-on-med-and-down',
-		'theme_location' => 'header-menu',
+		'theme_location' => 'header-menu'
 		));
 	      ?>
 		</div>
 	</nav>
-<div class="divider hide-on-small-only" style="margin-bottom: 10px;"></div>
+<div class="divider" style="margin-bottom: 10px;"></div>
