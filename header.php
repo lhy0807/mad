@@ -16,21 +16,23 @@
 	<link href="http://fonts.useso.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="<?php echo bloginfo('stylesheet_url');?>" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<?php wp_head();?>
+	<?php if(mad_option('bannerurl',' ')==' '):?>
 	<?php
 	$str=file_get_contents('http://cn.bing.com/HPImageArchive.aspx?idx=0&n=1');
 	if(preg_match("/<url>(.+?)<\/url>/ies",$str,$matches)){
  	$imgurl='http://cn.bing.com'.$matches[1];
 	}
 	?>
+	<?php endif;?>
 	<script>
 		window.onload = function(){
 			$("#preloader").fadeOut();
 			$("#wrapper").fadeIn();
-			document.getElementById("box-image").src = "<?php echo $imgurl;?>";
+			document.getElementById("box-image").src = "<?php echo mad_option('bannerurl',$imgurl);?>";
 			document.getElementById("box").style="";
 			$("#box").fadeIn();
 			if (document.getElementById("bing-box")) {
-			document.getElementById("bing").src = "<?php echo $imgurl;?>";
+			document.getElementById("bing").src = "<?php echo mad_option('bannerurl',$imgurl);?>";
 			document.getElementById("bing-box").style="text-align: center;";
 			$("#bing-box").fadeIn();
 			}

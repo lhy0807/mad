@@ -1,5 +1,4 @@
 <?php 
-
 add_action( 'after_setup_theme', 'mad_theme_setup' );
 function mad_theme_setup() {
 	add_theme_support( 'post-thumbnails' );
@@ -8,6 +7,11 @@ function mad_theme_setup() {
 	add_action('wp_head','catch_that_image');
 	add_custom_background();
 	mad_register_menus();
+}
+
+if (!function_exists('optionsframework_init')){
+define('OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri().'/inc/');
+require_once dirname(__FILE__).'/inc/options-framework.php';
 }
 
 function catch_that_image() {
