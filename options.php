@@ -4,7 +4,7 @@
  */
 function optionsframework_option_name() {
 	// Change this to use your theme slug
-	return 'options-framework-theme';
+	return 'mad';
 }
 
 /**

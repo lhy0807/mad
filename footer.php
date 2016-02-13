@@ -11,7 +11,7 @@
 				));
 			      ?>
 		<div class="right" style="color: #000000;">
-       	Theme By <a href="http://www.caseba.com" style="color: #F44336;">Chris Lee</a>
+       	Theme By <a href="http://lhy.xyz" style="color: #F44336;">Chris Li</a>
        	&nbsp;&nbsp;
        	© 2014-<?php echo date("Y")?> 			
       	</div>

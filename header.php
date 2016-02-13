@@ -20,7 +20,9 @@
 	$str=file_get_contents('http://cn.bing.com/HPImageArchive.aspx?idx=0&n=1');
 	if(preg_match("/<url>(.+?)<\/url>/ies",$str,$matches)){
  	$imgurl='http://cn.bing.com'.$matches[1];
-	}
+	if(strstr($imgurl,'1366x768')) {
+	$imgurl = @str_replace('1366x768', '1920x1080', $imgurl);
+	}}
 	?>
 	<script>
 		window.onload = function(){
