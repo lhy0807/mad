@@ -103,4 +103,13 @@ function my_custom_avatar( $avatar, $id_or_email, $size, $default, $alt) {
  
     return $avatar;
 }
+//为可视化编辑器自定义按钮
+add_action('admin_print_footer_scripts','eg_quicktags');
+function eg_quicktags() {
+?>
+<script type="text/javascript" charset="utf-8">
+edButtons[edButtons.length] = new edButton( 'button', '音乐播放器', '<audio src="', '"/></audio> ', '' );
+</script>
+<?php
+}
 ?>
