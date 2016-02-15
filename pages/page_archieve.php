@@ -7,7 +7,7 @@ Template Name: 归档页面
 	<div class="row">
 	  <h1 class="red-text" style="text-align: center;font-size: 3.3rem;">归档页面</h1>
 	  <div class="divider"></div>
-	  <p class="grey-text" style="text-align: center;"><?php bloginfo('name');?>, &nbsp;Since 2014</p>
+	  <p class="grey-text" style="text-align: center;"><?php bloginfo('name');?>, &nbsp;Since <?php echo get_option('mad')['start_year']?></p>
 	</div>
 	<div class="row">
     <div class="col m6 offset-m3 s12" id="archives"> 

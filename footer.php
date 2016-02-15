@@ -13,7 +13,11 @@
 		<div class="right" style="color: #000000;">
        	Theme By <a href="http://lhy.xyz" style="color: #F44336;">Chris Li</a>
        	&nbsp;&nbsp;
-       	© 2014-<?php echo date("Y")?> 			
+       	© <?php echo get_option('mad')['start_year']?>-<?php echo date("Y")?>
+       	&nbsp;&nbsp;
+       	<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+       		<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+       	</a>		
       	</div>
 		</div>
 	</nav>
