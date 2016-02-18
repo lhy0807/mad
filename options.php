@@ -31,5 +31,13 @@ function optionsframework_options() {
 		'type' => 'text'
 	);
 	
+	$options[] = array(
+		'name' => __( '站点Banner介绍'),
+		'desc' => __( '留空即为对应Bing每日一图的介绍'),
+		'id' => 'banner_text',
+		'std' => '',
+		'type' => 'text'
+	);
+	
 	return $options;
 }
