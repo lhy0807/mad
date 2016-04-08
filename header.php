@@ -13,7 +13,7 @@
 	<title><?php bloginfo('name');?><?php wp_title('|');?></title>
 	<meta name="description" content="<?php bloginfo('description');?>"/>
 	<!-- CSS  -->
-	<link href="http://fonts.useso.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="<?php echo bloginfo('stylesheet_url');?>" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<?php wp_head();?>
 	<?php
