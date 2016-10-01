@@ -24,7 +24,7 @@
   	</footer>
 </div>
   <!--  Scripts-->
-  <script src="http://libs.useso.com/js/jquery/2.1.1-rc2/jquery.min.js"></script>
+  <script src="https://sdn.geekzu.org/ajax/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri().'/js/materialize.min.js';?>"></script>
   <script src="<?php echo get_stylesheet_directory_uri().'/js/init.js';?>"></script>
   	<?php if(is_home()) :?>
